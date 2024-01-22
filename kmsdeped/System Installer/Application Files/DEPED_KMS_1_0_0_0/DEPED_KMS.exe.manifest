@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DEPED_KMS.exe" version="1.0.0.0" publicKeyToken="84ce7ccea9021dd9" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="kms.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DEPED_KMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DEPED_KMS.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="MySql.Data" version="6.9.8.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DEPED_KMS.exe" size="362496">
+      <assemblyIdentity name="DEPED_KMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ZYzj/Hn+7UOUZvMDD/CtJnlQzsmqeHwXHmoIJVnTTeg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DEPED_KMS.exe.config" size="186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>h0UeIdteCM29dGVw07LmHp593fPbh0IN11GyN3f2uRA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="kms.ico" size="1150">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kNr1HmRLV+Jqht5Hdr1Fq4EA0zfMAUJcb2l6MoKTp9o=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=Lhester-PC\Lhester" issuerKeyHash="05fa8d413bf0ad078ea3122167b6cd214911a17b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>aiO1Dpw4exNJZV0TAEOEApHUc5qzr0XpSaD3/ucZPl8=</DigestValue></Reference></SignedInfo><SignatureValue>qjkQ3owG+RL4fOe9RjkAXX/VsgHUfad5IemL9cmk7GmcaqKWfMkF6tyGjJOqTAo/AkBautUaQUtsgxlQocOf5YignEaepJWlrTl+Goot+H/M86dt8XfADQRX10PohZH4xYPAp32eygWDy6tOxMojJL5xvm7ijKqxtbWaM0z48rg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tkZPW45NXPx5DpmGM4NB5H3AV6m6Vxokz9/WRxrd6kkoa2QSB7ejFh+PbxuK76ui+LtStT3RAPNWjoElviCj/eqS738tOj6b6aWk3NpgdX/tishxHz6as7XIId43whvnN3oZbx0xcRhO8bofl6w/Siwf0bsxka8uGVAKFIx9mTM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5f3e19e7fef7a049e945afb39a73d49102844300135d6549137b389c0eb5236a" Description="" Url=""><as:assemblyIdentity name="DEPED_KMS.exe" version="1.0.0.0" publicKeyToken="84ce7ccea9021dd9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Lhester-PC\Lhester</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Kzvy7Nb3Q8DE2iW9Li81oe7K2ePPZWa/GjooKmyeC48=</DigestValue></Reference></SignedInfo><SignatureValue>mWhEjMpCiTjN820iJzDky0cgn+21LAr3M+uVQig1F0Ooq/crgK6Vorqp0hgVawM3s1HTVvv4NrdjprGGPeJTFqP/znrOtcQcv6yn6WyvDdMc2+TD7VsU3cdu8FM/zrIhjlY62F77AS7h3dNqsSA/pDDsbVrqeZ3uu2P2uGMEeB8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tkZPW45NXPx5DpmGM4NB5H3AV6m6Vxokz9/WRxrd6kkoa2QSB7ejFh+PbxuK76ui+LtStT3RAPNWjoElviCj/eqS738tOj6b6aWk3NpgdX/tishxHz6as7XIId43whvnN3oZbx0xcRhO8bofl6w/Siwf0bsxka8uGVAKFIx9mTM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQEYzgoNmLF5tCblgEMvcSRTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQATABoAGUAcwB0AGUAcgAtAFAAQwBcAEwAaABlAHMAdABlAHIwHhcNMTcxMjIzMDI0NzUwWhcNMTgxMjIzMDg0NzUwWjAvMS0wKwYDVQQDHiQATABoAGUAcwB0AGUAcgAtAFAAQwBcAEwAaABlAHMAdABlAHIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALZGT1uOTVz8eQ6ZhjODQeR9wFepulcaJM/f1kca3epJKGtkEge3oxYfj28biu+rovi7UrU90QDzVo6BJb4go/3qku9/LTo+m+mlpNzaYHV/7YrIcR8+mrO1yCHeN8Ib5zd6GW8dMXEYTvG6H5esP0osH9G7MZGvLhlQChSMfZkzAgMBAAEwDQYJKoZIhvcNAQELBQADgYEALNbUKC6gGDz7e/2aZaouYyj9TmE9F/almz7Ldll1PqI5/0+gNT00ND3VVeeUMKrvZF2NNaaAlGdwgKLjyIITzlof1/TLEp541CDDgJj6lnzyP1LehYWUMt9WI6vCtW4E4SA+uARnXM5iPN/74017zkeH2gU6/834PEQSHuX1bdE=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

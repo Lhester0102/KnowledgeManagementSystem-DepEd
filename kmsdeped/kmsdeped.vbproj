@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60F04088-2C45-486A-BBA2-C47EEBCC6A7A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DEPED_KMS.My.MyApplication</StartupObject>
+    <RootNamespace>DEPED_KMS</RootNamespace>
+    <AssemblyName>DEPED_KMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>DepEd KMS</ProductName>
+    <PublisherName>MIT MMSU</PublisherName>
+    <SuiteName>DepEd KMS</SuiteName>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DEPED_KMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DEPED_KMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kms~1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>93169BBF6081AEC9E40846EF91252712ED369BA7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>kmsdeped_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graphical\all_graphs.Designer.vb">
+      <DependentUpon>all_graphs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\all_graphs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\electricity.Designer.vb">
+      <DependentUpon>electricity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\electricity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\enrollment_elementary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\enrollment_elementary.Designer.vb">
+      <DependentUpon>enrollment_elementary.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\enrollment_highschool.Designer.vb">
+      <DependentUpon>enrollment_highschool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\enrollment_highschool.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\graphs.Designer.vb">
+      <DependentUpon>graphs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\graphs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\graph_electricity.Designer.vb">
+      <DependentUpon>graph_electricity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\graph_electricity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\graph_mooe.Designer.vb">
+      <DependentUpon>graph_mooe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\graph_mooe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\graph_rooms.Designer.vb">
+      <DependentUpon>graph_rooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\graph_rooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\graph_teachers.Designer.vb">
+      <DependentUpon>graph_teachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\graph_teachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\graph_water.Designer.vb">
+      <DependentUpon>graph_water.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\graph_water.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical\line_graphs.Designer.vb">
+      <DependentUpon>line_graphs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\line_graphs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainfrm.Designer.vb">
+      <DependentUpon>mainfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Numerical\numerical_mooe.Designer.vb">
+      <DependentUpon>numerical_mooe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Numerical\numerical_mooe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Numerical\Numeric_Enrollment.Designer.vb">
+      <DependentUpon>Numeric_Enrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Numerical\Numeric_Enrollment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\teachers.Designer.vb">
+      <DependentUpon>teachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\teachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\rooms_ni.Designer.vb">
+      <DependentUpon>rooms_ni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\rooms_ni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\mooe.Designer.vb">
+      <DependentUpon>mooe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\mooe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DataEntry\rooms_i.Designer.vb">
+      <DependentUpon>rooms_i.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\rooms_i.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntry\water.Designer.vb">
+      <DependentUpon>water.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntry\water.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pie_Graphs\enrolment_pie.Designer.vb">
+      <DependentUpon>enrolment_pie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pie_Graphs\enrolment_pie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pie_Graphs\mooe_pie.Designer.vb">
+      <DependentUpon>mooe_pie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pie_Graphs\mooe_pie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_electricity.Designer.vb">
+      <DependentUpon>s_electricity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_electricity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\S_electricity_h.Designer.vb">
+      <DependentUpon>S_electricity_h.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\S_electricity_h.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_enrollment_ss.Designer.vb">
+      <DependentUpon>s_enrollment_ss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_enrollment_ss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_ernrollment_es.Designer.vb">
+      <DependentUpon>s_ernrollment_es.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_ernrollment_es.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_mooe.Designer.vb">
+      <DependentUpon>s_mooe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_mooe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_mooe_h.Designer.vb">
+      <DependentUpon>s_mooe_h.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_mooe_h.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_teachers.Designer.vb">
+      <DependentUpon>s_teachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_teachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_teachers_h.Designer.vb">
+      <DependentUpon>s_teachers_h.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_teachers_h.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_water.Designer.vb">
+      <DependentUpon>s_water.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_water.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searching\s_water_h.Designer.vb">
+      <DependentUpon>s_water_h.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searching\s_water_h.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pie_Graphs\teacher_pie.Designer.vb">
+      <DependentUpon>teacher_pie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pie_Graphs\teacher_pie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Graphical\all_graphs.resx">
+      <DependentUpon>all_graphs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\electricity.resx">
+      <DependentUpon>electricity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\enrollment_elementary.resx">
+      <DependentUpon>enrollment_elementary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\enrollment_highschool.resx">
+      <DependentUpon>enrollment_highschool.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\graphs.resx">
+      <DependentUpon>graphs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\graph_electricity.resx">
+      <DependentUpon>graph_electricity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\graph_mooe.resx">
+      <DependentUpon>graph_mooe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\graph_rooms.resx">
+      <DependentUpon>graph_rooms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\graph_teachers.resx">
+      <DependentUpon>graph_teachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\graph_water.resx">
+      <DependentUpon>graph_water.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical\line_graphs.resx">
+      <DependentUpon>line_graphs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainfrm.resx">
+      <DependentUpon>mainfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numerical\numerical_mooe.resx">
+      <DependentUpon>numerical_mooe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numerical\Numeric_Enrollment.resx">
+      <DependentUpon>Numeric_Enrollment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\teachers.resx">
+      <DependentUpon>teachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\rooms_ni.resx">
+      <DependentUpon>rooms_ni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\mooe.resx">
+      <DependentUpon>mooe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\rooms_i.resx">
+      <DependentUpon>rooms_i.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntry\water.resx">
+      <DependentUpon>water.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pie_Graphs\enrolment_pie.resx">
+      <DependentUpon>enrolment_pie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pie_Graphs\mooe_pie.resx">
+      <DependentUpon>mooe_pie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_electricity.resx">
+      <DependentUpon>s_electricity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\S_electricity_h.resx">
+      <DependentUpon>S_electricity_h.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_enrollment_ss.resx">
+      <DependentUpon>s_enrollment_ss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_ernrollment_es.resx">
+      <DependentUpon>s_ernrollment_es.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_mooe.resx">
+      <DependentUpon>s_mooe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_mooe_h.resx">
+      <DependentUpon>s_mooe_h.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_teachers.resx">
+      <DependentUpon>s_teachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_teachers_h.resx">
+      <DependentUpon>s_teachers_h.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_water.resx">
+      <DependentUpon>s_water.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searching\s_water_h.resx">
+      <DependentUpon>s_water_h.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pie_Graphs\teacher_pie.resx">
+      <DependentUpon>teacher_pie.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kmsdeped_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kms.ico" />
+    <Content Include="kms~1.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
